@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darkstream - Exclusive Streaming Platform</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="img/logo.jpg" type="image/jpeg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="img/logo.jpg" alt="Darkstream Logo">
+            <span>Darkstream</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#content">Content</a></li>
+            <li><a href="#request-form">Request</a></li>
+        </ul>
+        <div class="user-balance">
+            <span id="balance-display">Balance: $0.00 | ₦0</span>
+            <button id="add-funds-btn" class="add-funds-btn">Add Funds</button>
+        </div>
+    </nav>
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Darkstream</h1>
+            <p class="tagline">Exclusive Content for the Elite</p>
+            <a href="#content" class="cta-btn">Explore Now</a>
+        </div>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>Welcome to the Abyss...</h2>
+            <p>Only the brave enter, and only the wealthy stay. Pay to unlock the secrets.</p>
+        </section>
+        <section id="search">
+            <h2>Search Content</h2>
+            <input type="text" id="searchInput" placeholder="Enter content name">
+            <button id="searchButton">Search</button>
+        </section>
+        <section id="content-section">
+            <div class="content-tabs">
+                <button class="tab-btn active" data-tab="all">All</button>
+                <button class="tab-btn" data-tab="videos">Videos</button>
+                <button class="tab-btn" data-tab="images">Images</button>
+            </div>
+            <section id="content">
+                <!-- Video Content -->
+                <div id="video1" class="media-container locked" data-type="video">
+                    <div class="media-content">
+                        <video muted poster="img/vid1-thumb.jpg">
+                            <source src="video/vid1.mp4" type="video/mp4">
+                        </video>
+                        <div class="locked-overlay">
+                            <img src="img/lock.jpg" alt="Locked">
+                            <span>Naija Lagos babe Luna (0:53)</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-title">Naija Lagos babe Luna</div>
+                        <div class="card-price">$0.08</div>
+                    </div>
+                    <button class="unlock-btn" data-content="video1" data-price="0.08">Unlock</button>
+                </div>
+                <div id="video2" class="media-container locked" data-type="video">
+                    <div class="media-content">
+                        <video muted poster="img/vid2-thumb.jpg">
+                            <source src="video/vid2.mp4" type="video/mp4">
+                        </video>
+                        <div class="locked-overlay">
+                            <img src="img/lock.jpg" alt="Locked">
+                            <span>tiktok babe h***** exposing her boobs (0:21)</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-title">tiktok babe h***** exposing her boobs</div>
+                        <div class="card-price">$0.09</div>
+                    </div>
+                    <button class="unlock-btn" data-content="video2" data-price="0.09">Unlock</button>
+                </div>
+                <!-- Image Content -->
+                <div id="image1.1" class="media-container locked" data-type="image" data-image-path="img/img1.1.jpg">
+                    <div class="media-content">
+                        <img src="img/img1.1.jpg" alt="Locked Image">
+                        <div class="locked-overlay">
+                            <img src="img/lock.jpg" alt="Locked">
+                            <span>Naija Lagos babe Luna face</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-title">Naija Lagos babe Luna face</div>
+                        <div class="card-price">$0.1</div>
+                    </div>
+                    <button class="unlock-btn" data-content="image1.1" data-price="0.1">Unlock</button>
+                </div>
+                <div id="image1.2" class="media-container locked" data-type="image" data-image-path="img/img1.2.jpg">
+                    <div class="media-content">
+                        <img src="img/img1.2.jpg" alt="Locked Image">
+                        <div class="locked-overlay">
+                            <img src="img/lock.jpg" alt="Locked">
+                            <span>Naija Lagos babe Luna boobs</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-title">Naija Lagos babe Luna boobs</div>
+                        <div class="card-price">$0.07</div>
+                    </div>
+                    <button class="unlock-btn" data-content="image1.2" data-price="0.07">Unlock</button>
+                </div>
+                <div id="image2" class="media-container locked" data-type="image" data-image-path="img/img2.jpg">
+                    <div class="media-content">
+                        <img src="img/img2.jpg" alt="Locked Image">
+                        <div class="locked-overlay">
+                            <img src="img/lock.jpg" alt="Locked">
+                            <span>tiktok babe face</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-title">tiktok babe face</div>
+                        <div class="card-price">$0.11</div>
+                    </div>
+                    <button class="unlock-btn" data-content="image2" data-price="0.11">Unlock</button>
+                </div>
+            </section>
+        </section>
+        <section id="request-form">
+            <div class="request-card">
+                <h2><span class="form-icon">&#9993;</span> Request Content</h2>
+                <form id="requestForm">
+                    <div class="input-group">
+                        <span class="input-icon">&#128100;</span>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-icon">&#9993;</span>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-icon">&#128221;</span>
+                        <textarea name="message" placeholder="Your Request" required></textarea>
+                    </div>
+                    <button type="submit">Send Request</button>
+                </form>
+                <div id="request-feedback" class="request-feedback"></div>
+            </div>
+        </section>
+    </main>
+    <div id="content-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    <div id="add-funds-modal" class="modal">
+        <div class="modal-content add-funds-modal-content">
+            <span id="close-add-funds-modal" class="close">&times;</span>
+            <h2>Add Funds</h2>
+            <form id="addFundsForm">
+                <label for="funds-amount">Amount (USD):</label>
+                <input type="number" id="funds-amount" name="funds-amount" min="1" step="0.001" required>
+                <button type="submit">Add Funds</button>
+            </form>
+            <p class="exchange-rate-info">Exchange rate: 1 USD = ₦1,500</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Darkstream. All rights reserved. No downloads allowed.</p>
+            <div class="social-icons">
+                <a href="#" title="Twitter"><svg width="24" height="24" fill="currentColor"><use href="#icon-twitter"/></svg></a>
+                <a href="#" title="Instagram"><svg width="24" height="24" fill="currentColor"><use href="#icon-instagram"/></svg></a>
+                <a href="#" title="Telegram"><svg width="24" height="24" fill="currentColor"><use href="#icon-telegram"/></svg></a>
+            </div>
+        </div>
+        <svg style="display:none;">
+            <symbol id="icon-twitter" viewBox="0 0 24 24"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195A4.92 4.92 0 0 0 16.616 3c-2.73 0-4.942 2.21-4.942 4.932 0 .386.045.763.127 1.124C7.728 8.807 4.1 6.884 1.671 3.965c-.423.722-.666 1.561-.666 2.475 0 1.708.87 3.216 2.188 4.099a4.904 4.904 0 0 1-2.237-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.936 4.936 0 0 1-2.224.084c.627 1.956 2.444 3.377 4.6 3.417A9.867 9.867 0 0 1 0 21.543a13.94 13.94 0 0 0 7.548 2.209c9.057 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.636A9.936 9.936 0 0 0 24 4.557z"/></symbol>
+            <symbol id="icon-instagram" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.974-.974 2.241-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.775.13 4.602.402 3.545 1.459 2.488 2.516 2.216 3.689 2.158 4.966.013 8.332 0 8.741 0 12c0 3.259.013 3.668.072 4.948.058 1.277.33 2.45 1.387 3.507 1.057 1.057 2.23 1.329 3.507 1.387C8.332 23.987 8.741 24 12 24c3.259 0 3.668-.013 4.948-.072 1.277-.058 2.45-.33 3.507-1.387 1.057-1.057 1.329-2.23 1.387-3.507.059-1.28.072-1.689.072-4.948 0-3.259-.013-3.668-.072-4.948-.058-1.277-.33-2.45-1.387-3.507C19.398.402 18.225.13 16.948.072 15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></symbol>
+            <symbol id="icon-telegram" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12c0-6.627-5.373-12-12-12zm5.707 8.293l-2.828 10.607c-.211.793-.68.98-1.377.61l-3.813-2.813-1.84.888c-.202.099-.384.183-.785.183l.28-3.96 7.22-6.53c.314-.28-.068-.436-.487-.156l-8.94 5.63-3.84-1.2c-.834-.26-.847-.834.174-1.236l15.06-5.81c.7-.26 1.31.17 1.087 1.23z"/></symbol>
+        </svg>
+    </footer>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
